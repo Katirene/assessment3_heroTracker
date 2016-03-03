@@ -1,0 +1,19 @@
+<p>Edit Post</p>
+<div class="row">
+    <div class="well col-md-3">
+        <p>{{blogPostToEdit.title}}</p>
+        <p>{{blogPostToEdit.date}}</p>
+        <p>{{blogPostToEdit.blog}}</p>
+        <p>{{blogPostToEdit.name}}</p>
+        <div>
+            <form name="comments">
+                <!--<label for="comments">Reviewers Comments:  </label>-->
+                <!--<textarea ng-model="review">Enter Text here:</textarea>-->
+                <input type="text" ng-model="review">Enter Text here: </input>
+                <button ng-show="deleted == false" ng-click="update(blogPostToEdit._id)" class="btn btn-default">Update</button>
+                <button ng-show="deleted == false" ng-click="deletePost(blogPostToEdit._id)" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+        <p ng-show="deleted">You've deleted this Blog Post!</p>
+    </div>
+</div>
