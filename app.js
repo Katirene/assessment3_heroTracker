@@ -82,22 +82,23 @@ app.delete('/blogPost/:id', function(req, res) {
     });
 });
 
-app.put('/putRequest/:id', function(req, res){
+app.put('/blogPost/:id', function(req, res){
     console.log('hellyeah');
-    //var newComments = req.body.data;
-    //BlogPost.findByIdAndUpdate(
-    //    {_id: req.params.id},
-    //    {
-    //        $set: {comments: "newComments"}
-    //    },
-    //    function(err, data) {
-    //        if(err) {
-    //            console.log('ERR: ', err);
-    //        }
-    //
-    //        res.send(data);
-    //    }
-    //);
+    console.log('here is the req.body:', req.body);
+    var newComments = req.body.review;
+    BlogPost.findByIdAndUpdate(
+        {_id: req.params.id},
+        {
+            $set: {comments: newComments}
+        },
+        function(err, data) {
+            if(err) {
+                console.log('ERR: ', err);
+            }
+
+            res.send(data);
+        }
+    );
 
 });
 

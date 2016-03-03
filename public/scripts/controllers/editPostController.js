@@ -7,6 +7,7 @@ myApp.controller('EditPostController', ['$scope', '$http', 'DataFactory', functi
     $scope.dataFactory = DataFactory;
     $scope.currentID = $scope.dataFactory.factoryReturnStoredID();
     $scope.deleted = false;
+    $scope.updated = false;
     $scope.review = '';
 
     getData($scope.currentID);
@@ -21,15 +22,16 @@ myApp.controller('EditPostController', ['$scope', '$http', 'DataFactory', functi
     }
 
 
-    //$scope.update = function(id) {
-    //
-    //    //data = $scope.review;
-    //    data = 'bob';
-    //    console.log('id from scope.update function: ', id);
-    //    $http.put('/blogPost/' + id, data).then(function(response) {
-    //        console.log('response sent', response.data);
-    //    });
-    //};
+    $scope.update = function(id) {
+
+        data = {review: $scope.review};
+
+        console.log('id from scope.update function: ', id);
+        $http.put('/blogPost/' + id, data).then(function(response) {
+            console.log('response sent', response.data);
+            $scope.updated = true;
+        });
+    };
 
 
     $scope.deletePost = function(id) {
@@ -44,21 +46,5 @@ myApp.controller('EditPostController', ['$scope', '$http', 'DataFactory', functi
 };
 
 
-
-
-$scope.update = function(id) {
-
-    //data = $scope.review;
-    data = 'bob';
-    console.log('id from scope.update function: ', id);
-    $http({
-        method: 'PUT',
-        url: '/putRequest/' + id,
-        data: data,
-        success: function(response) {
-        console.log('response sent', response.data);
-        }
-})
-};
 
 }]);
