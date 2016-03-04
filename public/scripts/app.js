@@ -9,8 +9,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
             controller: 'CreateController'
         })
         .when('/heroListing', {
-            templateUrl: '/views/templates/listPosts.html',
-            controller: 'ListPostsController'
+            templateUrl: '/views/templates/heroListing.html',
+            controller: 'HeroListingController'
         })
         .otherwise({
             redirectTo: '/createPost'

@@ -14,8 +14,15 @@ myApp.controller('CreateController', ['$scope', '$http', function($scope, $http)
 
     $scope.addsuperPower = function() {
         console.log($scope.superpower);
+        var data = {superpower: $scope.superpower};
+        $http.put('/updateHero/' + id, data).then(function(response) {
+            console.log('response sent', response.data);
+            $scope.updated = true;
+        });
         $scope.addedPower = true;
     };
+
+
 
     $scope.addHeroPost = function() {
         var heroPost = {
@@ -38,3 +45,6 @@ myApp.controller('CreateController', ['$scope', '$http', function($scope, $http)
     };
 
 }]);
+
+//Assessment Note!
+//Most of this controller is complete.  I was stuck on modeling the superpower from the <li> listings of each power .  Spent perhaps the final 20 minutes trying to figure out how to do that.

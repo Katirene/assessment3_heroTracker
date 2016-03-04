@@ -24,6 +24,10 @@ mongoose.model(
     }
 ));
 
+///Assessment note!  Have all of my back end built out!  In hind sight this was a poor way to spend my time.
+//considering that some will have to be changed anyways and I never got to implement a lot of it.
+//however, building the routes was helphful in understanding the assignment.
+
 var Hero = mongoose.model('Hero');
 
 mongoose.model(
