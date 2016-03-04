@@ -1,0 +1,48 @@
+<p>Enter Your Super Hero!</p>
+<div class="row">
+    <div class="col-md-6">
+        <form>
+            <label for="alias">Alias: </label>
+            <input type="text" ng-model="alias" id="alias" />
+            <label for="first_name">First Name: </label>
+            <input type="text" ng-model="first_name" id="first_name" />
+            <label for="last_name">Last Name: </label>
+            <input type="text" ng-model="last_name" id="last_name" />
+            <label for="city">City: </label>
+            <input type="text" ng-model="city" id="city"/>
+            <label for="primary_power">Primary Power: </label>
+            <input type="text" ng-model="primary_power" id="primary_power"/>
+            <button class="btn btn-info" ng-click="addHeroPost()">Add Hero</button>
+            <p ng-show="added">Hero Added!</p>
+        </form>
+        <!--<div class=enteredHeroes display="inline">-->
+            <!--<p>{{alias}}</p>-->
+            <!--<p>{{first_name}}</p>-->
+            <!--<p>{{last_name}}</p>-->
+            <!--<p>{{city}}</p>-->
+            <!--<p>{{primary_power}}</p>-->
+        <!--</div>-->
+        <div ng-show="added">
+            <h1>Now add as super power to your Hero!</h1>
+            <ul class="menu" ng-model="superpower">
+                <li>Invisibility</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Flight</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Super Speed</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Heat Vision</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Super Strength</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Accelerated Healing</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Power Blast</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+                <li>Animal Affinity</li>
+                <button class="btn btn-info" ng-click="addsuperPower()">Add Super Power</button>
+            </ul>
+            <p ng-show="addedPower">{{superpower}} has been added!</p>
+        </div>
+    </div>
+</div>
