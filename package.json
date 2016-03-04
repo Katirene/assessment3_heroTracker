@@ -16,5 +16,14 @@
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "mongoose": "^4.4.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katirene/blog_workflowMongooseChallenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Katirene/blog_workflowMongooseChallenge/issues"
+  },
+  "homepage": "https://github.com/Katirene/blog_workflowMongooseChallenge#readme"
 }
